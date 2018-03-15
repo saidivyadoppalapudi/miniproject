@@ -335,7 +335,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		author = new JLabel (" " + "Online Banking System", Label.LEFT);
 		author.setForeground (Color.black);
 		author.setToolTipText ("Program's Title");
-		welcome = new JLabel ("Welcome next day is " + d + " ", JLabel.RIGHT);
+		welcome = new JLabel ("hi hello " + d + " ", JLabel.RIGHT);
 		welcome.setForeground (Color.black);
 		welcome.setToolTipText ("Welcoming the User & System Current Date");
 		statusBar.setLayout (new BorderLayout());
