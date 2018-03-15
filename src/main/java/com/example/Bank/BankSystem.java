@@ -76,7 +76,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 	public BankSystem () {
 
 		//Setting Program's Title.
-		super ("BankSystem [Pvt] Limited.");
+		super ("Online Banking System");
 
 		UIManager.addPropertyChangeListener (new UISwitchListener ((JComponent)getRootPane()));
 
@@ -331,7 +331,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		toolBar.add (btnKey);
 
 		//Creating the StatusBar of Program.
-		author = new JLabel (" " + "BankSystem [Pvt] Limited.", Label.LEFT);
+		author = new JLabel (" " + "Online Banking System", Label.LEFT);
 		author.setForeground (Color.black);
 		author.setToolTipText ("Program's Title");
 		welcome = new JLabel ("Welcome Today is " + d + " ", JLabel.RIGHT);
@@ -502,9 +502,8 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		}
 		else if (obj == about) {
 
-			String msg = "BankSystem [Pvt] Limited.\n\n" + "Created & Designed By:\n" + 
-				"Muhammad Wasif Javed\n\n" + "E-mail me:\n wasi_javed@hotmail.com";
-			JOptionPane.showMessageDialog (this, msg, "About BankSystem", JOptionPane.PLAIN_MESSAGE);
+			String msg = "Online Banking System\n\n";
+			//JOptionPane.showMessageDialog (this, msg, "About BankSystem", JOptionPane.PLAIN_MESSAGE);
 
 		}
 
@@ -528,13 +527,13 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		try {
 			//Show a Confirmation Dialog.
 		    	int reply = JOptionPane.showConfirmDialog (this,
-					"Are you really want to exit\nFrom BankSystem?",
+					"Are you really want to exit\nFrom Online Banking System?",
 					"BankSystem - Exit", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE);
 			//Check the User Selection.
 			if (reply == JOptionPane.YES_OPTION) {
 				setVisible (false);	//Hide the Frame.
 				dispose();            	//Free the System Resources.
-				System.out.println ("Thanks for Using BankSystem\nAuthor - Muhammad Wasif Javed");
+				System.out.println ("Thanks for Using Online Banking System");
 				System.exit (0);        //Close the Application.
 			}
 			else if (reply == JOptionPane.NO_OPTION) {
@@ -661,13 +660,13 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 	String makeRecordPrint (int rec) {
 
 		String data;
-		String data0 = "               BankSystem [Pvt] Limited.               \n";	//Page Title.
+		String data0 = "              Online Banking System               \n";	//Page Title.
 		String data1 = "               Customer Balance Report.              \n\n";	//Page Header.
 		String data2 = "  Account No.:       " + records[rec][0] + "\n";
 		String data3 = "  Customer Name:     " + records[rec][1] + "\n";
 		String data4 = "  Last Transaction:  " + records[rec][2] + ", " + records[rec][3] + ", " + records[rec][4] + "\n";
 		String data5 = "  Current Balance:   " + records[rec][5] + "\n\n";
-		String data6 = "          Copyright  2003 Muhammad Wasif Javed.\n";	//Page Footer.
+		String data6 = "         \n";	//Page Footer.
 		String sep0 = " -----------------------------------------------------------\n";
 		String sep1 = " -----------------------------------------------------------\n";
 		String sep2 = " -----------------------------------------------------------\n";
