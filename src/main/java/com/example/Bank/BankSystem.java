@@ -1,4 +1,5 @@
 package com.example.Bank;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -111,8 +112,8 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		mnuOpt.setMnemonic ((int)'O');
 		mnuWin = new JMenu ("Window");
 		mnuWin.setMnemonic ((int)'W');
-		mnuHelp = new JMenu ("Help");
-		mnuHelp.setMnemonic ((int)'H');
+		//mnuHelp = new JMenu ("Help");
+		//mnuHelp.setMnemonic ((int)'H');
 
 		//Creating the MenuItems of Program.
 		//MenuItems for FileMenu.
@@ -120,10 +121,10 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		addNew.setAccelerator (KeyStroke.getKeyStroke(KeyEvent.VK_N, Event.CTRL_MASK));
 		addNew.setMnemonic ((int)'N');
 		addNew.addActionListener (this);
-		printRec = new JMenuItem ("Print Customer Balance", new ImageIcon ("Images/New.gif"));
-		printRec.setAccelerator (KeyStroke.getKeyStroke(KeyEvent.VK_R, Event.CTRL_MASK));
-		printRec.setMnemonic ((int)'R');
-		printRec.addActionListener (this);
+		//printRec = new JMenuItem ("Print Customer Balance", new ImageIcon ("Images/New.gif"));
+		//printRec.setAccelerator (KeyStroke.getKeyStroke(KeyEvent.VK_R, Event.CTRL_MASK));
+		//printRec.setMnemonic ((int)'R');
+		//printRec.addActionListener (this);
 		end = new JMenuItem ("Quit BankSystem ?", new ImageIcon ("Images/export.gif"));
 		end.setAccelerator (KeyStroke.getKeyStroke(KeyEvent.VK_Q, Event.CTRL_MASK));
 		end.setMnemonic ((int)'Q');	
@@ -208,7 +209,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		//File Menu Items.
 		mnuFile.add (addNew);
 		mnuFile.addSeparator ();
-		mnuFile.add (printRec);
+		//mnuFile.add (printRec);
 		mnuFile.addSeparator ();
 		mnuFile.add (end);
 
@@ -238,11 +239,11 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		mnuWin.add (closeAll);
 
 		//Help Menu Items.
-		mnuHelp.add (content);
-		mnuHelp.addSeparator ();
-		mnuHelp.add (keyHelp);
-		mnuHelp.addSeparator ();
-		mnuHelp.add (about);
+		//mnuHelp.add (content);
+		//mnuHelp.addSeparator ();
+		//mnuHelp.add (keyHelp);
+		//mnuHelp.addSeparator ();
+		//mnuHelp.add (about);
 
 		//Adding Menues to Bar.
 		bar.add (mnuFile);
@@ -250,7 +251,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		bar.add (mnuView);
 		bar.add (mnuOpt);
 		bar.add (mnuWin);
-		bar.add (mnuHelp);
+		//bar.add (mnuHelp);
 
 		//MenuItems for PopupMenu.
 		open = new JMenuItem ("Open New Account", new ImageIcon ("Images/Open.gif"));
@@ -298,21 +299,21 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		btnWith = new JButton (new ImageIcon ("Images/SuperDisk.gif"));
 		btnWith.setToolTipText ("Withdraw Money");
 		btnWith.addActionListener (this);
-		btnRec = new JButton (new ImageIcon ("Images/Paproll.gif"));
-		btnRec.setToolTipText ("Print Customer Balance");
-		btnRec.addActionListener (this);
+		//btnRec = new JButton (new ImageIcon ("Images/Paproll.gif"));
+		//btnRec.setToolTipText ("Print Customer Balance");
+		//btnRec.addActionListener (this);
 		btnDel = new JButton (new ImageIcon ("Images/Toaster.gif"));
 		btnDel.setToolTipText ("Delete Customer");
 		btnDel.addActionListener (this);
 		btnSrch = new JButton (new ImageIcon ("Images/Search.gif"));
 		btnSrch.setToolTipText ("Search Customer");
 		btnSrch.addActionListener (this);
-		btnHelp = new JButton (new ImageIcon ("Images/Help.gif"));
-		btnHelp.setToolTipText ("Help on Bank System");
-		btnHelp.addActionListener (this);
-		btnKey = new JButton (new ImageIcon ("Images/Keys.gif"));
-		btnKey.setToolTipText ("Shortcut Keys of BankSystem");
-		btnKey.addActionListener (this);
+		//btnHelp = new JButton (new ImageIcon ("Images/Help.gif"));
+		//btnHelp.setToolTipText ("Help on Bank System");
+		//btnHelp.addActionListener (this);
+		//btnKey = new JButton (new ImageIcon ("Images/Keys.gif"));
+		//btnKey.setToolTipText ("Shortcut Keys of BankSystem");
+		//btnKey.addActionListener (this);
 
 		//Creating the ToolBar of Program.
 		toolBar = new JToolBar ();
@@ -321,20 +322,20 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		toolBar.add (btnDep);
 		toolBar.add (btnWith);
 		toolBar.addSeparator ();
-		toolBar.add (btnRec);
-		toolBar.addSeparator ();
+		//toolBar.add (btnRec);
+		//toolBar.addSeparator ();
 		toolBar.add (btnDel);
 		toolBar.addSeparator ();
 		toolBar.add (btnSrch);
-		toolBar.addSeparator ();
-		toolBar.add (btnHelp);
-		toolBar.add (btnKey);
+		//toolBar.addSeparator ();
+		//toolBar.add (btnHelp);
+		//toolBar.add (btnKey);
 
 		//Creating the StatusBar of Program.
 		author = new JLabel (" " + "Online Banking System", Label.LEFT);
 		author.setForeground (Color.black);
 		author.setToolTipText ("Program's Title");
-		welcome = new JLabel ("Welcome Today is " + d + " ", JLabel.RIGHT);
+		welcome = new JLabel ("hi hello " + d + " ", JLabel.RIGHT);
 		welcome.setForeground (Color.black);
 		welcome.setToolTipText ("Welcoming the User & System Current Date");
 		statusBar.setLayout (new BorderLayout());
@@ -490,7 +491,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 			}
 
 		}
-		else if (obj == keyHelp || obj == btnKey) {
+		/*else if (obj == keyHelp || obj == btnKey) {
 
 			boolean b = openChildWindow ("BankSystem Keys");
 			if (b == false) {
@@ -503,9 +504,9 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		else if (obj == about) {
 
 			String msg = "Online Banking System\n\n";
-			//JOptionPane.showMessageDialog (this, msg, "About BankSystem", JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog (this, msg, "About BankSystem", JOptionPane.PLAIN_MESSAGE);
 
-		}
+		}*/
 
 	}
 
@@ -527,7 +528,7 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 		try {
 			//Show a Confirmation Dialog.
 		    	int reply = JOptionPane.showConfirmDialog (this,
-					"Are you really want to exit\nFrom Online Banking System?",
+					"Are you really want to exit\nFrom BankSystem?",
 					"BankSystem - Exit", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE);
 			//Check the User Selection.
 			if (reply == JOptionPane.YES_OPTION) {
@@ -660,13 +661,13 @@ public class BankSystem extends JFrame implements ActionListener, ItemListener {
 	String makeRecordPrint (int rec) {
 
 		String data;
-		String data0 = "              Online Banking System               \n";	//Page Title.
+		String data0 = "               Online Banking system              \n";	//Page Title.
 		String data1 = "               Customer Balance Report.              \n\n";	//Page Header.
 		String data2 = "  Account No.:       " + records[rec][0] + "\n";
 		String data3 = "  Customer Name:     " + records[rec][1] + "\n";
 		String data4 = "  Last Transaction:  " + records[rec][2] + ", " + records[rec][3] + ", " + records[rec][4] + "\n";
 		String data5 = "  Current Balance:   " + records[rec][5] + "\n\n";
-		String data6 = "         \n";	//Page Footer.
+		String data6 = "       \n";	//Page Footer.
 		String sep0 = " -----------------------------------------------------------\n";
 		String sep1 = " -----------------------------------------------------------\n";
 		String sep2 = " -----------------------------------------------------------\n";
