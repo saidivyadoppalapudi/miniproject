@@ -15,7 +15,6 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'mvn test'
-                logstashSend failBuild: true, maxLines: 1000
             }
         }
         stage('Deploy') {
