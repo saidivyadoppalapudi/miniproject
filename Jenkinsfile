@@ -19,16 +19,23 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             echo 'deploying..'
-step([$class: "RundeckNotifier",  
-             jobId: "1",
-             nodeFilters: "",
-      		rundeckInstance: "Default",
-      		shouldFailTheBuild: true,
-      		shouldWaitForRundeckJob: true,
-      		tags: "",
-      		tailLog: true])
+					script {
+   			 step([$class: "RundeckNotifier",
+          			includeRundeckLogs: true,
+          			jobId: "1",
+          			nodeFilters: "",
+          			options: """
+                   	PARAM_1=value1
+                   	PARAM_2=value2
+                   	PARAM_3=
+                   	""",
+          			rundeckInstance: "Default",
+          			shouldFailTheBuild: true,
+          			shouldWaitForRundeckJob: true,
+          			tags: "",
+          			tailLog: true])
+  					}             
     		}
-    	}
+		}
 	}
 }
