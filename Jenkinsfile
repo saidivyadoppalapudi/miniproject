@@ -21,6 +21,6 @@ pipeline {
             steps {
 			build 'rundeck_job'           
     		}
-		}
+	}
 	}
 }
